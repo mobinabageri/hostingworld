@@ -1,3 +1,5 @@
+const baseUrl= "http://185.80.196.11:6003"
+
 //start login
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -10,7 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const password = document.getElementById("password").value;
 
         try {
-            const response = await fetch("http://185.80.196.11:6003/api/auth/login", {
+            const response = await fetch(`${baseUrl}api/auth/login`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
@@ -58,7 +60,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const password = document.getElementById("regPassword").value;
 
         try {
-            const response = await fetch("http://185.80.196.11:6003/api/auth/register", {
+            const response = await fetch(`${baseUrl}/api/auth/register`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
